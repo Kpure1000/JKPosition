@@ -5,13 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.kpureposition.MainActivity;
 import com.example.kpureposition.R;
 
 public class DashboardFragment extends Fragment {
@@ -30,6 +34,7 @@ public class DashboardFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+//        System.out.println("重新加载");
         return root;
     }
 }

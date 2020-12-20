@@ -54,7 +54,7 @@
                     android:textAlignment="center" />
 
                 <EditText
-                    android:id="@+id/editText_axisX"
+                    android:id="@+id/axisX"
                     android:layout_width="95dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -69,7 +69,7 @@
                     android:textAlignment="center" />
 
                 <EditText
-                    android:id="@+id/editText_axisY"
+                    android:id="@+id/axisY"
                     android:layout_width="77dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -77,6 +77,13 @@
                     android:inputType="textPersonName" />
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/scanButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点我开始扫描"
+                android:textColor="@android:color/holo_green_dark" />
 
         </LinearLayout>
     </ScrollView>

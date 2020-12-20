@@ -1,7 +1,13 @@
 package com.example.kpureposition;
 
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.kpureposition.myUtil.Point;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +18,13 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    //  Wifi
+    WifiManager wifiManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //  Default init:
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -25,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        //  WIFI init:
+//        wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
+
     }
 
 }

@@ -6,6 +6,6 @@
     <string name="title_notifications">Scan Record</string>
     <string name="CopyrightText">Copyright@Kpurek-Jummer</string>
 <!--    Home-WifiPosition-->
-    <string name="SelfDefinePosition">自定义AP相对坐标 (默认0，0)</string>
+    <string name="SelfDefinePosition">自定义坐标 (默认0，0)</string>
     <string name="InputPosition">输入坐标    </string>
 </resources>
