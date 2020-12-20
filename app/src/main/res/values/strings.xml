@@ -7,5 +7,5 @@
     <string name="CopyrightText">Copyright@Kpurek-Jummer</string>
 <!--    Home-WifiPosition-->
     <string name="SelfDefinePosition">自定义坐标 (默认0，0)</string>
-    <string name="InputPosition">输入坐标    </string>
+    <string name="InputPosition">输出坐标    </string>
 </resources>
