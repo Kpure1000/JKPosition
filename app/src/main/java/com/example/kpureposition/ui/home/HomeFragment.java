@@ -46,8 +46,8 @@ public class HomeFragment extends Fragment {
 
     private TextView logView;
 
-    private EditText axis_x1,axis_x2,axis_x3;
-    private EditText axis_y1,axis_y2,axis_y3;
+    private EditText axis_x1, axis_x2, axis_x3;
+    private EditText axis_y1, axis_y2, axis_y3;
 
     //  Wifi
     private WifiManager wifiManager;
@@ -98,6 +98,7 @@ public class HomeFragment extends Fragment {
 
     /**
      * 控制台输出用的
+     *
      * @param textView
      * @param content
      */
@@ -112,6 +113,7 @@ public class HomeFragment extends Fragment {
 
     /**
      * 获取标准时间
+     *
      * @return
      */
     private String getTimeFormatStr() {
@@ -128,9 +130,27 @@ public class HomeFragment extends Fragment {
         // 用
         //  selfPoint.wifiLists;
 
-        // 输出
-        eX.setText("巴拉巴拉");
-        eY.setText("巴拉巴拉");
+        final int effectivePointNumbers = 3;
+
+        float result = Float.MAX_VALUE;
+        int minIndex = 0;
+
+        int i = 0;
+        for (i = 0; i < selfPoint.wifiLists.size(); i++) {
+            float tmpRes = 0;
+            int j = 0;
+            for (j = 0; j < effectivePointNumbers && j < selfPoint.wifiLists.get(i).size(); j++) {
+                tmpRes += Math.pow(selfPoint.wifiLists.get(i).get(0).level - selfPoint.wifiLists.get(i).get(j).level, 2);
+            }
+            if (result > tmpRes) {
+                result = tmpRes;
+                minIndex = i;
+            }
+        }
+
+        eX.setText("1");
+        eY.setText("0");
+
         isCalculated = false;
     }
 
